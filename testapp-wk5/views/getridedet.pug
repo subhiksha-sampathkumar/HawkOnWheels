@@ -1,0 +1,33 @@
+extends layout 
+
+
+block main-content
+  div.content
+    div.right   
+          img(src='./how.jpg' alt='logo' style='width:290px; height:305px;')      
+          footer#footer 
+            p &copy; Copyright HawkOnWheels, 2023.
+    h1.page-title Post a Ride
+    form(method="post", action="/postRide/submit")
+        div
+            label(for="rideID") No. Of Trips:
+            input(type="number", min="1", id="rdId", name="rideID")
+        div
+            label(for="fromPt") From:
+            input(type="text", id="fromPt", name="from", placeholder="")
+        div
+            label(for="toPt") To:
+            input(type="text", id="toPt", name="to", placeholder="")
+        div
+            label(for="driverID") No. Of Seats:
+            input(type="text", id="drvrID", name="drvID", placeholder="")
+        div
+            label(for="userID") No. Of Passengers:
+            input(type="number", min="1", id="usId", name="userID")   
+        div
+            label(for="distance") Distance:
+            input(type="text", id="dist", name="distance", placeholder="")
+        div
+            label(for="cost") Cost:
+            input(type="text", id="cost", name="cost", placeholder="") 
+        button(type="submit", value="submitForm") Submit

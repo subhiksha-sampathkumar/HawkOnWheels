@@ -1,0 +1,12 @@
+extends layout 
+
+
+block main-content  
+    div.content
+        div.right   
+          img(src='./how.jpg' alt='logo' style='width:290px; height:305px;')      
+          footer#footer 
+            p &copy; Copyright HawkOnWheels, 2023.
+            p Thank you for entering start and end points! 
+            br
+            a(href='/route') Click here to list route details between#{fp} to #{tp}

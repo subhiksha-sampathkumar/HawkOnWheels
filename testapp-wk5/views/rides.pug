@@ -1,0 +1,29 @@
+extends layout 
+
+
+block main-content 
+  div.content
+    //You can overwrite the main-content block by writing block content
+    //in the template file which is extending.
+    div.right   
+          img(src='./how.jpg' alt='logo' style='width:290px; height:305px;')      
+          footer#footer 
+            p &copy; Copyright HawkOnWheels, 2023.
+    h1.page-title Available rides  
+    br
+    br
+    table#tbl
+      thead
+        tr
+          th Ride From
+          th To
+      tbody
+        each ride in menu
+          tr
+            td #{ride.from}
+            td #{ride.to}
+            td  
+              form(action="aboutRide")
+                  input(type="hidden", name="rideId", value=ride._id) 
+                  button(type="submit") Book Now
+  
